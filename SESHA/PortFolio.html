@@ -1,0 +1,484 @@
+﻿﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>SESHATHIRI</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+#chart{
+  position:relative;
+  top:40px;
+left:300px;  
+width:700px;
+  height:200px;
+}
+@-webkit-keyframes bargrowth{
+  0%   {max-height: 0%;}
+  100%  {max-height: 100%;}
+}
+@keyframes bargrowth{
+  0%   {max-height: 0%;}
+  100%  {max-height: 100%;}
+}
+.bar{
+  -webkit-animation: bargrowth 3000ms ease;
+  animation: bargrowth 3000ms ease;
+  position:absolute;
+  bottom:0;
+  display:inline-block;
+  background:rgb(200,0,0);
+  box-shadow: 1px -1px rgb(255,0,0), 2px -2px rgb(255,0,0), 3px -3px rgb(255,0,0),   4px -4px rgb(255,0,0);
+}
+
+span{
+		color:rgb(255,0,0);
+		}
+h1{		postion:absolute;
+		margin-top:30px;
+		margin-left:600px;
+        color:white;
+        letter-spacing:2px;
+		}
+    h2 {
+        postion: relative;
+        margin-top: 70px;
+        margin-left: 300px;
+        color: white;
+        letter-spacing: 2px;
+    }
+body{
+		background-color:black}
+    h4 {
+        width: 100px;
+        height: 45px;
+        color: rgb(255,0,0);
+        font-weight: bold;
+        position: relative;
+        top: 35px;
+        -webkit-animation: mymove 5s; /* Safari 4.0 - 8.0 */
+        animation: mymove 5s;
+        animation-fill-mode: forwards;
+        
+        letter-spacing: 2px;
+    }
+
+/* Safari 4.0 - 8.0 */
+#div1 {-webkit-animation-timing-function: ease;}
+#div2 {-webkit-animation-timing-function: ease;}
+#div3 {-webkit-animation-timing-function: ease;}
+#div4 {-webkit-animation-timing-function: ease;}
+
+
+/* Standard syntax */
+#div1 {animation-timing-function: ease;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease;}
+#div4 {animation-timing-function: ease;}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+.slidecontainer {
+    width: 40%;
+}
+
+    .slider {
+        position: relative;
+        left: 425px;
+        bottom: 200px;
+        margin-bottom: 30px;
+        -webkit-appearance: none;
+        width: 25%;
+        height: 15px;
+        border-radius: 5px;
+        background: rgb(130, 127, 123);
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(255,0,0);
+   
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(255,0,0);
+
+}
+
+
+#a{position:relative;top:60px;left:220px;color:rgb(255,0,0)
+}
+#b{position:relative;top:30px;left:400px;color:rgb(255,0,0)
+}
+#c{position:relative;top:0px;left:580px;color:rgb(255,0,0)
+}
+#d{position:relative;bottom:50px;left:755px;color:rgb(255,0,0)
+}
+
+.footer {
+   position:relative;
+   left: 0;
+   bottom: 50px;
+   width: auto;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+div.footer p{
+		letter-spacing: 2px;
+		font-size:10px;
+		opacity:0.7;
+		}
+.fa-facebook {
+  		background: #3B5998;
+  		color: white;
+		}
+.fa-google {
+ 		 background: #dd4b39;
+ 		 color: white;
+		}
+.fa-linkedin {
+ 		 background: #007bb5;
+  		color: white;
+		}
+.fa {
+		  padding: 5px;
+		  font-size: 20px;
+		  width: 30px;
+		  text-align: center;
+  		  text-decoration: none;
+  		  margin: 5px 2px;
+  	          border-radius: 40%;
+                }
+
+.fa:hover {
+    		 opacity: 0.7;
+		}
+    #lang {
+        postion: relative;
+        margin-bottom: 0px;
+        margin-left: 300px;
+        color: white;
+        letter-spacing: 2px;
+    }
+    #pro {
+        position:relative;
+        top:-180px;
+        left:300px;
+    }
+    #proj {
+        position:relative;
+        top:-200px;
+    }
+    #want {
+        color:white;
+        letter-spacing:1px;
+        position:relative;
+        left:300px
+    }
+    #harry{
+        position:relative;
+        top:200px;
+        left:-10px;
+    }
+    #harrys {
+        position: relative;
+        top: 100px;
+        right: 690px;
+    }
+    #harryss {
+        position: relative;
+        top: 0px;
+        left: 680px;
+    }
+    @media screen and (max-width: 700px) {
+        #chart{
+  position:relative;
+  top:50px;
+  left:5px;
+  width:340px;
+  height:100px;
+}
+    h1 {
+        postion: absolute;
+        margin-top: 10px;
+        margin-left: 100px;
+        color: white;
+        letter-spacing: 2px;
+    }
+    h2 {
+        postion: relative;
+        margin-top: 30px;
+        margin-left: 0px;
+        color: white;
+        letter-spacing: 2px;
+    }
+    .slider {
+        position: relative;
+        left: 150px;
+        bottom: 120px;
+        margin-bottom: 10px;
+        -webkit-appearance: none;
+        width: 25%;
+        height: 15px;
+        border-radius: 5px;
+        background: rgb(130, 127, 123);
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+    h4 {
+        width: 50px;
+        height: 25px;
+        color: rgb(255,0,0);
+        line-height: 1.6;
+        font-weight: bold;
+        line-height: 1.8;
+        position: relative;
+        bottom: 0px;
+        -webkit-animation: mymove 5s; /* Safari 4.0 - 8.0 */
+        animation: mymove 5s;
+        animation-fill-mode: forwards;
+        
+        letter-spacing: 2px;
+    }
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 40px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 40px;}
+}
+
+    #lang {
+        postion: relative;
+        margin-bottom: 0px;
+        margin-left: 5px;
+        margin-top: -140px;
+        color: white;
+        letter-spacing: 2px;
+    }
+    #want {
+        color: white;
+        letter-spacing: 1px;
+        position: relative;
+        left: 5px
+    }
+        #harry {
+            position: relative;
+            margin-top: -170px;
+            left: 0px;
+        }
+        #pro {
+            position: relative;
+            top: -80px;
+            left:5px;
+            
+        }
+        #proj {
+            position: relative;
+            top: -100px;
+        }
+        #harrys {
+            position: relative;
+            top: 200px;
+            right: 0px;
+        }
+        #harryss {
+            position: relative;
+            top: 200px;
+            left: 0px;
+        }
+        
+}
+</style>
+<script>
+$(document).ready(function(){
+	$("body").hide(1);
+        $("body").fadeIn(2500);
+	var c=$(window).width();
+	var d=$(window).height();
+       if(c<700)
+	{
+		$("#a").hide();
+		$("#b").hide();
+		$("#c").hide();
+           $("#d").hide();
+           $("#Footbr").show();
+
+		$("#e").html("<p>&nbsp;DBMS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oops&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Data</p>");
+		$("#e").css({"position":"relative","left":"10px","bottom":"185px","color":"rgb(255,0,0)" });
+		$("#f").html("<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;structures</p>");
+           $("#f").css({ "position": "relative", "left": "10px", "bottom": "197px", "color": "rgb(255,0,0)", "word-spacing": " 5px" });
+           $("#care").show();
+       	}	
+	else{
+		$("#a").show();
+		$("#b").show();
+		$("#c").show();
+		$("#d").show();
+           $("#e").hide();
+           $("#Footbr").hide();
+           $("#f").hide();
+           $("#care").hide();
+		}
+
+});
+</script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse" style="background-color:rgb(0,0,0);text-align:center;font-family: 'Bungee Shade';font-size: 22px;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav ">
+                   
+
+                    <li><a href="Aboutme.html"><span style="font-weight:100;color:white">About me</span></a></li>
+                    <li class="active"><a href="PortFolio.html"><span style="font-weight:100;color:red">Portfolio</span></a></li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <h1><span>P</span>ort <span>F</span>olio</h1><br>
+    <p id="want">Want to know my techinal skills and the projects I done so far? If yes the go through this page</p>
+    <h2><span>T</span>op <span>S</span>kills</h2>
+    <div id="chart"></div>
+
+    <script>
+        /* Inspired by : https://codepen.io/obc/pen/ypDmg */
+        /* Te iubesc pisoi */
+        /* @_tomesch */
+
+        // Add values to the values array and see what happens :)
+        var values = [450, 550, 400, 300];
+
+        drawChart(values, "#chart", 10) // You can adjust the margin between each bar by changing 10 to whatever you like
+
+        function drawChart(data, selector, padding) {
+            var max = Math.max.apply(Math, data);
+            var chart = document.querySelector(selector);
+            var barwidth = ((chart.offsetWidth - (values.length - 1) * padding - (data.length) * 10) / data.length);
+            var sum = data.reduce(function (pv, cv) { return pv + cv; }, 0);
+            var left = 0;
+            for (var i in data) {
+                var newbar = document.createElement('div');
+                newbar.setAttribute("class", "bar");
+                newbar.style.width = barwidth + "px";
+                newbar.style.height = ((data[i] / max) * 100) + "%";
+                newbar.style.left = left + "px";
+                chart.appendChild(newbar);
+                left += (barwidth + padding + 10);
+            }
+        }
+    </script>
+    <div class="container">
+        <p id="a">DBMS</p>
+        <p id="b">Web Development</p>
+        <p id="c">Object Oriented<br>Programming</p>
+        <p id="d">Data Structures</p>
+    </div>
+    <div id="care">
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div id="e"></div>
+    <div id="f"></div>
+    <h2 id="lang"><span>L</span>anguages <span>K</span>nown</h2>
+    <h4 id="div1">C</h4>
+    <h4 id="div2">Python</h4>
+    <h4 id="div3">Html&CSS</h4>
+    <h4 id="div4">Java</h4>
+
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="75" class="slider" id="myRange" disabled>
+
+    </div><br>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="60" class="slider" id="myRange" disabled>
+
+    </div><br>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange" disabled>
+
+    </div><br>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange" disabled>
+
+    </div>
+    <h2 id="pro"><span>P</span>rojects:</h2>
+    <div class="row" id="proj">
+        <div class="col-sm-6 ">
+            <h2><span>T</span>racking <span>A</span>nonymous <span>u</span>sers <span>i</span>n <span>I</span>nternet</h2>
+            <p style="color:white;letter-spacing:1px;line-height:1.6;border-style:dashed;border-radius:10%;border-color:rgb(130, 127, 123);background-color:rgb(130, 127, 123);padding:5px;text-align:justify">
+                 Tracking guest/anonymous users can be quite challenging considering the different possible scenarios.The basic concept is to create an ID that will not likely be duplicated in any user. 
+            </p>
+        </div>
+	<br><br><br>
+        <div class="col-sm-6 " id="harry">
+            <h2><span>M</span>y <span>P</span>ersonal <span>W</span>ebsite</h2>
+            <p style="color:white;letter-spacing:1px;line-height:1.6;border-style:hidden;border-radius:10%;border-color:rgb(130, 127, 123);background-color:rgb(130, 127, 123);padding:5px;text-align:justify">
+                Basically I was to planning to put all my skills and projects which I done on my Linkedin profile.Then I got an idea of designing my personal website.
+                This is how I designed the website. For this I learned HTML, CSS and Javascript. I used two framework here.<br>1)Jquery(JS)<br>2)Bootstrap(CSS)<br>
+                I hope this website gives you the proper description about my technical skills.Thus this site was HAND CODED BY ME.
+            </p>
+        </div>
+        </div><br><br><br><br><br><br><br><br>
+    </div><div id="Footbr"><br><br><br><br><br><br><br><br><br><br></div>
+    <div class="footer">
+
+        <p>Follow me on:</p>
+        
+        
+        <a href="https://www.linkedin.com/in/seshadri-dri/" class="fa fa-linkedin"></a>
+
+    </div>
+
+</body>
+</html>

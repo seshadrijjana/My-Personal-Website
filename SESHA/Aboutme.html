@@ -1,0 +1,342 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SESHATHIRI</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        span {
+            color: red;
+        }
+
+        #h1 {
+            position: relative;
+            color: white;
+            left: 460px;
+            top: 0px
+        }
+
+        #about {
+            position: relative;
+            color: white;
+            left: 350px;
+            top: -10px;
+            line-height: 1.8;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        .footer {
+            position: relative;
+            left: 0;
+            bottom: 50px;
+            width: auto;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        div.footer p {
+            letter-spacing: 2px;
+            font-size: 10px;
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa {
+            padding: 5px;
+            font-size: 20px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 40%;
+        }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+            /* The actual timeline (the vertical ruler) */
+            .timeline::after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                background-color: red;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                margin-left: -3px;
+            }
+
+        /* Container around content */
+        .container {
+            margin: 0;
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+            /* The circles on the timeline */
+            .container::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                right: -17px;
+                background-color: black;
+                top: 15px;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+        /* Place the container to the left */
+        .left {
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .right {
+            left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+            color: gray;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right::after {
+            left: -16px;
+        }
+
+        /* The actual content */
+        .content {
+            padding: 20px 30px;
+            background-color: gray;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 700px) {
+            /* Place the timelime to the left */
+            .timeline::after {
+                left: 31px;
+            }
+
+            /* Full-width containers */
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 50px;
+            }
+
+                /* Make sure that all arrows are pointing leftwards */
+                .container::before {
+                    left: 60px;
+                    border: medium solid white;
+                    border-width: 10px 10px 10px 0;
+                    border-color: transparent white transparent transparent;
+                    visibility: hidden;
+                }
+
+            /* Make sure all circles are at the same spot */
+            .left::after, .right::after {
+                left: 15px;
+            }
+
+            /* Make all right containers behave like the left ones */
+            .right {
+                left: 0%;
+            }
+
+            #h1 {
+                position: relative;
+                left: 10px;
+                top: -50px;
+            }
+
+            #about {
+                text-align: justify;
+                position: relative;
+                left: 0px;
+                top: -70px;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+
+           $("body").hide(1);
+           $("body").fadeIn(2500);
+            var c = $(window).width();
+            var d = $(window).height();
+            if (c < 700) {
+                $("#bab").show();
+            }
+            else {
+                $("#bab").hide();
+            }
+        });
+    </script>
+</head>
+                    <body style="background-color:black">
+
+                        <nav class="navbar navbar-inverse" style="background-color:rgb(0,0,0);text-align:center;font-family: 'Bungee Shade';font-size: 22px;">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+
+                                </div>
+                                <div class="collapse navbar-collapse" id="myNavbar">
+                                    <ul class="nav navbar-nav">
+                                       
+
+                                        <li class="active"><a href="Aboutme.html"><span style="font-weight:100;color:red">About me</span></a></li>
+                                        <li ><a href="PortFolio.html"><span style="font-weight:100;color:white">Portfolio</span></a></li>
+                                        
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </nav>
+
+
+                        <div class="container">
+
+                            <h2 id="h1">Hi , I am <div id="bab"><br></div><span style="color:red;font-size:40px">S</span>eshathiri </h2><br>
+                                <p id="about">A wild combination of nerd and extrovert.
+I spent my childhood playing cricket till I realize coding is more interesting to cricket.
+Intially I fell for andriod developing.
+But once I got to know about Web Development and specifically about front end development,
+I dropped out the idea of developing the android application.
+Then started studying Web designing for weeks and completed on my own.
+For me, Front end developing is the one of the most interesting concepts in Web development.
+So, I was curiously started studying Web designing courses and yet to complete it.
+After understanding the basics of Web designing
+I started implementing the concepts to design my personal website. Thus this website became my first Web designing project project.<br><br>
+
+
+</div>
+                        <h4 style="text-align:center;color:white"><span>W</span>anna <span>k</span>now <span>m</span>ore <span>a</span>bout <span>m</span>e?? swipe it up</h4>
+                        <div class="timeline">
+                            <div class="container left">
+                                <div class="content">
+                                    <h2 style="color:#000000">1997</h2>
+                                    <p style="text-align:justify"><b>A stupid to others, who thinks others are stupid born in the southern part of India.</b></p>
+                                </div>
+                            </div>
+                            <div class="container right">
+                                <div class="content">
+                                    <h2 style="color:#000000">1997-2007</h2>
+                                    <p style="text-align:CENTER"><b>The days where I was not aware of the competency skills which I believe, I possess now to survive in this world,the days that I spent happily without any worries.</b> </p>
+                                </div>
+                            </div>
+                            <div class="container left">
+                                <div class="content">
+                                    <h2 style="color:#000000">2008-2013</h2>
+                                    <p style="text-align:justify"><b>Curiously played cricket to get placed in team India.This proves that how immature I was during that period.From my KG to HSC I studied in Karnataka Sanga matriculation higher sec. school </b> </p>
+                                </div>
+                            </div>
+                            <div class="container right">
+                                <div class="content">
+                                    <h2 style="color:#000000">2013-2015</h2>
+                                    <p style="text-align:justify"><b>Basically I was a below average student.I believed that HSC mark(cut-off)will decide my future and 
+  studied sincerely for 1 year.This shows that how innocent I was.</b></p>
+                                </div>
+                            </div>
+                            <div class="container left">
+                                <div class="content">
+                                    <h2 style="color:#000000">2015-2016</h2>
+                                    <p style="text-align:justify"><b>My college life started at Meenakshi sundararajan engineering college and got seat in  IT department.The year where many strangers became my friends.</b> </p>
+                                </div>
+                            </div>
+                            <div class="container right">
+                                <div class="content">
+                                    <h2 style="color:#000000">2017-Present</h2>
+                                    <p style="text-align:justify"><b>Started learning Web development. Learned many concepts in Web designing but seeking speciality in it. Also developed my personal website.</b></p>
+                                </div>
+                            </div>
+                            <div class="container left">
+                                <div class="content">
+                                    <h2 style="color:#000000">FUTURE</h2>
+                                    <p style="text-align:justify"><b>May be businessman / scientist / software architect / farmer or all of them!</b></p>
+                                </div>
+                            </div>
+                        </div><br><br><br><br>
+                                                <div class="footer">
+
+                                                    <p>Follow me on:</p>
+                                                   
+                                                    
+                                                    <a href="https://www.linkedin.com/in/seshadri-dri/" class="fa fa-linkedin"></a>
+
+                                                </div>
+
+
+
+</body>
+</html>
